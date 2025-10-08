@@ -1,0 +1,9 @@
+var g_db_data = [
+{dummy:0},
+{name:'wrt_cg',f:1,type:6,id:1319,tb:'6',h:'6',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/fifo_pkg/subscriber',parent:'1314'},
+{name:'rd_cg',f:1,type:6,id:1323,tb:'6',h:'6',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/fifo_pkg/subscriber',parent:'1314'},
+{name:'wr_rd_cg',f:1,type:6,id:1327,tb:'15',h:'15',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/fifo_pkg/subscriber',parent:'1314'},
+{name:'wrt_cg',f:1,type:6,id:1737,tb:'6',h:'6',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','true']],hdlPath:'work.fifo_pkg::subscriber',parent:'1732'},
+{name:'rd_cg',f:1,type:6,id:1741,tb:'6',h:'6',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','true']],hdlPath:'work.fifo_pkg::subscriber',parent:'1732'},
+{name:'wr_rd_cg',f:1,type:6,id:1745,tb:'15',h:'15',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','true']],hdlPath:'work.fifo_pkg::subscriber',parent:'1732'}];
+processConsCovergroupsData(g_db_data);

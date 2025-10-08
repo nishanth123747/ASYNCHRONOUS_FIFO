@@ -1,0 +1,1217 @@
+# vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; run -all; exit" 
+# Start time: 22:03:32 on Oct 07,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: asyc_fifo_rd_sequence.sv(14): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.inf(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.fifo_pkg(fast)
+# Loading work.testbench_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.inf(fast)
+# Loading work.FIFO(fast)
+# Loading work.two_ff_sync(fast)
+# Loading work.FIFO_memory(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.wptr_full(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test fifo_test...
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 0: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-1] CAPTURED: winc = 0 wfull = x
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 15: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-2] CAPTURED: winc = 0 wfull = 0
+# ** Info: ASSERTION-4 PASSED: RESET CHECK
+#    Time: 15 ns Started: 15 ns  Scope: top.intf.reset_check File: interface.sv Line: 90
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 25: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-1] SENT: wdata = 53 win = 1
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 30 ns Started: 30 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 35: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-3] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 35: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 53 COMPLETED, PASS (size=1)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 35 ns Started: 35 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 45: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-2] SENT: wdata = 245 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 45 ns Started: 45 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 50: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-1] SENT: rinc = 1
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 50 ns Started: 50 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 55: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-4] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 55: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 245 COMPLETED, PASS (size=2)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 55 ns Started: 55 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 65: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-3] SENT: wdata = 222 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 65 ns Started: 65 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 70 ns Started: 70 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 75: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-5] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 75: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 222 COMPLETED, PASS (size=3)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 75 ns Started: 75 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 85: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-4] SENT: wdata = 224 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 85 ns Started: 85 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 90: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-1] CAPTURED: rdata = 53 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 90: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 53, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 90: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-2] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 90 ns Started: 90 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 95: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-6] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 95: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 224 COMPLETED, PASS (size=3)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 95 ns Started: 95 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 105: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-5] SENT: wdata = 23 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 105 ns Started: 105 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 110 ns Started: 110 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 115: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-7] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 115: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 23 COMPLETED, PASS (size=4)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 115 ns Started: 115 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 125: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-6] SENT: wdata = 234 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 125 ns Started: 125 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 130: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-2] CAPTURED: rdata = 53 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 130: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-3] SENT: rinc = 1
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 130 ns Started: 130 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 135: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-8] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 135: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 234 COMPLETED, PASS (size=5)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 135 ns Started: 135 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 145: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-7] SENT: wdata = 166 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 145 ns Started: 145 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 150 ns Started: 150 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 150 ns Started: 150 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 155: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-9] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 155: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 166 COMPLETED, PASS (size=6)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 155 ns Started: 155 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 165: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-8] SENT: wdata = 133 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 165 ns Started: 165 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 170: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-3] CAPTURED: rdata = 245 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 170: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 245, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 170: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-4] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 170 ns Started: 170 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 170 ns Started: 170 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 175: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-10] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 175: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 133 COMPLETED, PASS (size=6)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 175 ns Started: 175 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 185: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-9] SENT: wdata = 195 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 185 ns Started: 185 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 190 ns Started: 190 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 190 ns Started: 190 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 195: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-11] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 195: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 195 COMPLETED, PASS (size=7)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 195 ns Started: 195 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 205: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-10] SENT: wdata = 112 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 205 ns Started: 205 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 210: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-4] CAPTURED: rdata = 222 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 210: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 222, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 210: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-5] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 210 ns Started: 210 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 210 ns Started: 210 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 215: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-12] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 215: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 112 COMPLETED, PASS (size=7)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 215 ns Started: 215 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 225: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-11] SENT: wdata = 145 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 225 ns Started: 225 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 230 ns Started: 230 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 230 ns Started: 230 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 235: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-13] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 235: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 145 COMPLETED, PASS (size=8)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 235 ns Started: 235 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 245: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-12] SENT: wdata = 39 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 245 ns Started: 245 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 250: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-5] CAPTURED: rdata = 224 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 250: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 224, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 250: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-6] SENT: rinc = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 250 ns Started: 250 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 250 ns Started: 250 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 255: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-14] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 255: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 39 COMPLETED, PASS (size=8)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 255 ns Started: 255 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 265: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-13] SENT: wdata = 191 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 265 ns Started: 265 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 270 ns Started: 270 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 275: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-15] CAPTURED: winc = 1 wfull = 0
+# UVM_ERROR asyc_fifo_scoreboard.sv(69) @ 275: uvm_test_top.env.scb [SCOREBOARD-WRITE] DUT failed to assert wfull at full depth (size = 8), FAIL
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 275 ns Started: 275 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 285: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-14] SENT: wdata = 211 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 285 ns Started: 285 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 290: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-6] CAPTURED: rdata = 224 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 290: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-7] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 290 ns Started: 290 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 295: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-16] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 295: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 295 ns Started: 295 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 305: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-15] SENT: wdata = 86 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 305 ns Started: 305 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 310 ns Started: 310 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 315: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-17] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 315: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 315 ns Started: 315 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 325: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-16] SENT: wdata = 120 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 325 ns Started: 325 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 330: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-7] CAPTURED: rdata = 224 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 330: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-8] SENT: rinc = 1
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 330 ns Started: 330 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 335: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-18] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 335: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 335 ns Started: 335 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 345: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-17] SENT: wdata = 38 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 345 ns Started: 345 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 350 ns Started: 350 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 350 ns Started: 350 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 355: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-19] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 355: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 355 ns Started: 355 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 365: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-18] SENT: wdata = 22 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 365 ns Started: 365 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 370: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-8] CAPTURED: rdata = 23 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 370: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 23, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 370: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-9] SENT: rinc = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 370 ns Started: 370 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 370 ns Started: 370 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 375: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-20] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 375: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 22 COMPLETED, PASS (size=8)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 375 ns Started: 375 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 385: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-19] SENT: wdata = 247 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 385 ns Started: 385 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 390 ns Started: 390 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 395: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-21] CAPTURED: winc = 1 wfull = 0
+# UVM_ERROR asyc_fifo_scoreboard.sv(69) @ 395: uvm_test_top.env.scb [SCOREBOARD-WRITE] DUT failed to assert wfull at full depth (size = 8), FAIL
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 395 ns Started: 395 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 405: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-20] SENT: wdata = 251 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 405 ns Started: 405 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 410: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-9] CAPTURED: rdata = 23 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 410: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-10] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 410 ns Started: 410 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 415: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-22] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 415: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 415 ns Started: 415 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 425 ns Started: 425 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 430 ns Started: 430 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 435: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-23] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 435: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 435 ns Started: 435 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 445 ns Started: 445 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 450: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-10] CAPTURED: rdata = 23 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 450: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-11] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 450 ns Started: 450 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 455: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-24] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 455: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 455 ns Started: 455 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 465 ns Started: 465 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 470 ns Started: 470 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 475: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-25] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 475: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 475 ns Started: 475 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 485 ns Started: 485 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 490: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-11] CAPTURED: rdata = 23 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 490: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-12] SENT: rinc = 1
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 490 ns Started: 490 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 495: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-26] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 495: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 495 ns Started: 495 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 505 ns Started: 505 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 510 ns Started: 510 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 510 ns Started: 510 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 515: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-27] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 515: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 515 ns Started: 515 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 525 ns Started: 525 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 530: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-12] CAPTURED: rdata = 234 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 530: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 234, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 530: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-13] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 530 ns Started: 530 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 530 ns Started: 530 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 535: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-28] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 535: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 251 COMPLETED, PASS (size=8)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 535 ns Started: 535 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 545 ns Started: 545 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 550 ns Started: 550 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 550 ns Started: 550 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 555: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-29] CAPTURED: winc = 1 wfull = 0
+# UVM_ERROR asyc_fifo_scoreboard.sv(69) @ 555: uvm_test_top.env.scb [SCOREBOARD-WRITE] DUT failed to assert wfull at full depth (size = 8), FAIL
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 555 ns Started: 555 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 565 ns Started: 565 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 570: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-13] CAPTURED: rdata = 166 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 570: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 166, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 570: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-14] SENT: rinc = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 570 ns Started: 570 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 570 ns Started: 570 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 575: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-30] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 575: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 251 COMPLETED, PASS (size=8)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 575 ns Started: 575 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 585 ns Started: 585 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 590 ns Started: 590 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 595: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-31] CAPTURED: winc = 1 wfull = 0
+# UVM_ERROR asyc_fifo_scoreboard.sv(69) @ 595: uvm_test_top.env.scb [SCOREBOARD-WRITE] DUT failed to assert wfull at full depth (size = 8), FAIL
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 595 ns Started: 595 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 605 ns Started: 605 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 610: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-14] CAPTURED: rdata = 166 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 610: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-15] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 610 ns Started: 610 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 615: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-32] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 615: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 615 ns Started: 615 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 625 ns Started: 625 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 630 ns Started: 630 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 635: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-33] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 635: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 635 ns Started: 635 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 645 ns Started: 645 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 650: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-15] CAPTURED: rdata = 166 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 650: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-16] SENT: rinc = 1
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 650 ns Started: 650 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 655: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-34] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 655: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 655 ns Started: 655 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 665 ns Started: 665 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 670 ns Started: 670 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 670 ns Started: 670 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 675: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-35] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 675: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 675 ns Started: 675 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 685 ns Started: 685 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 690: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-16] CAPTURED: rdata = 133 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 690: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 133, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 690: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-17] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 690 ns Started: 690 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 690 ns Started: 690 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 695: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-36] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 695: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 251 COMPLETED, PASS (size=8)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 695 ns Started: 695 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 705 ns Started: 705 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 710 ns Started: 710 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 710 ns Started: 710 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 715: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-37] CAPTURED: winc = 1 wfull = 0
+# UVM_ERROR asyc_fifo_scoreboard.sv(69) @ 715: uvm_test_top.env.scb [SCOREBOARD-WRITE] DUT failed to assert wfull at full depth (size = 8), FAIL
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 715 ns Started: 715 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 725 ns Started: 725 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 730: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-17] CAPTURED: rdata = 195 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 730: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 195, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 730: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-18] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 730 ns Started: 730 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 730 ns Started: 730 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 735: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-38] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 735: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 251 COMPLETED, PASS (size=8)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 735 ns Started: 735 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 745 ns Started: 745 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 750 ns Started: 750 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 750 ns Started: 750 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 755: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-39] CAPTURED: winc = 1 wfull = 0
+# UVM_ERROR asyc_fifo_scoreboard.sv(69) @ 755: uvm_test_top.env.scb [SCOREBOARD-WRITE] DUT failed to assert wfull at full depth (size = 8), FAIL
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 755 ns Started: 755 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 765 ns Started: 765 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 770: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-18] CAPTURED: rdata = 112 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 770: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 112, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 770: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-19] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 770 ns Started: 770 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 770 ns Started: 770 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 775: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-40] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 775: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 251 COMPLETED, PASS (size=8)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 775 ns Started: 775 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 785 ns Started: 785 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 790 ns Started: 790 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 790 ns Started: 790 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 795: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-41] CAPTURED: winc = 1 wfull = 0
+# UVM_ERROR asyc_fifo_scoreboard.sv(69) @ 795: uvm_test_top.env.scb [SCOREBOARD-WRITE] DUT failed to assert wfull at full depth (size = 8), FAIL
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 795 ns Started: 795 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 805 ns Started: 805 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 810: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-19] CAPTURED: rdata = 39 rempty = 0 rinc = 1
+# UVM_ERROR asyc_fifo_scoreboard.sv(95) @ 810: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ MISMATCH: DUT=39, EXP=145
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 810: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-20] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 810 ns Started: 810 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 810 ns Started: 810 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 815: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-42] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 815: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 251 COMPLETED, PASS (size=8)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 815 ns Started: 815 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 825 ns Started: 825 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 830 ns Started: 830 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 830 ns Started: 830 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 835: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-43] CAPTURED: winc = 1 wfull = 0
+# UVM_ERROR asyc_fifo_scoreboard.sv(69) @ 835: uvm_test_top.env.scb [SCOREBOARD-WRITE] DUT failed to assert wfull at full depth (size = 8), FAIL
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 835 ns Started: 835 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 845 ns Started: 845 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 850: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-20] CAPTURED: rdata = 22 rempty = 0 rinc = 1
+# UVM_ERROR asyc_fifo_scoreboard.sv(95) @ 850: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ MISMATCH: DUT=22, EXP=39
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 850: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-21] SENT: wdata = 130 win = 1
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 850: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-21] SENT: rinc = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 850 ns Started: 850 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 850 ns Started: 850 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 855: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-44] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 855: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 251 COMPLETED, PASS (size=8)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 855 ns Started: 855 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 865: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-22] SENT: wdata = 237 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 865 ns Started: 865 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 870 ns Started: 870 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 875: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-45] CAPTURED: winc = 1 wfull = 0
+# UVM_ERROR asyc_fifo_scoreboard.sv(69) @ 875: uvm_test_top.env.scb [SCOREBOARD-WRITE] DUT failed to assert wfull at full depth (size = 8), FAIL
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 875 ns Started: 875 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 885: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-23] SENT: wdata = 157 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 885 ns Started: 885 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 890: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-21] CAPTURED: rdata = 22 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 890: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-22] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 890 ns Started: 890 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 895: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-46] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 895: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 895 ns Started: 895 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 905: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-24] SENT: wdata = 136 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 905 ns Started: 905 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 910 ns Started: 910 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 915: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-47] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 915: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 915 ns Started: 915 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 925: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-25] SENT: wdata = 125 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 925 ns Started: 925 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 930: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-22] CAPTURED: rdata = 22 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 930: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-23] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 930 ns Started: 930 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 935: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-48] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 935: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 935 ns Started: 935 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 945: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-26] SENT: wdata = 90 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 945 ns Started: 945 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 950 ns Started: 950 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 955: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-49] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 955: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 955 ns Started: 955 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 965: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-27] SENT: wdata = 36 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 965 ns Started: 965 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 970: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-23] CAPTURED: rdata = 22 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 970: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-24] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 970 ns Started: 970 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 975: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-50] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 975: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 975 ns Started: 975 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 985: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-28] SENT: wdata = 181 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 985 ns Started: 985 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 990 ns Started: 990 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 995: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-51] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 995: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 995 ns Started: 995 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1005: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-29] SENT: wdata = 101 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1005 ns Started: 1005 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1010: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-24] CAPTURED: rdata = 22 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1010: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-25] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1010 ns Started: 1010 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1015: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-52] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1015: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1015 ns Started: 1015 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1025: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-30] SENT: wdata = 76 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1025 ns Started: 1025 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1030 ns Started: 1030 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1035: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-53] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1035: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1035 ns Started: 1035 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1045: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-31] SENT: wdata = 23 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1045 ns Started: 1045 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1050: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-25] CAPTURED: rdata = 22 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1050: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-26] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1050 ns Started: 1050 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1055: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-54] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1055: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1055 ns Started: 1055 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1065: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-32] SENT: wdata = 110 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1065 ns Started: 1065 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1070 ns Started: 1070 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1075: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-55] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1075: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1075 ns Started: 1075 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1085: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-33] SENT: wdata = 86 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1085 ns Started: 1085 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1090: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-26] CAPTURED: rdata = 22 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1090: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-27] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1090 ns Started: 1090 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1095: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-56] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1095: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1095 ns Started: 1095 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1105: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-34] SENT: wdata = 130 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1105 ns Started: 1105 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1110 ns Started: 1110 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1115: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-57] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1115: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1115 ns Started: 1115 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1125: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-35] SENT: wdata = 173 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1125 ns Started: 1125 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1130: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-27] CAPTURED: rdata = 22 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1130: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-28] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1130 ns Started: 1130 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1135: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-58] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1135: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1135 ns Started: 1135 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1145: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-36] SENT: wdata = 225 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1145 ns Started: 1145 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1150 ns Started: 1150 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1155: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-59] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1155: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1155 ns Started: 1155 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1165: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-37] SENT: wdata = 0 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1165 ns Started: 1165 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1170: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-28] CAPTURED: rdata = 22 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1170: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-29] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1170 ns Started: 1170 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1175: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-60] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1175: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1175 ns Started: 1175 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1185: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-38] SENT: wdata = 225 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1185 ns Started: 1185 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1190 ns Started: 1190 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1195: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-61] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1195: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1195 ns Started: 1195 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1205: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-39] SENT: wdata = 104 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1205 ns Started: 1205 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1210: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-29] CAPTURED: rdata = 22 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1210: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-30] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1210 ns Started: 1210 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1215: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-62] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1215: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1215 ns Started: 1215 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1225: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-40] SENT: wdata = 222 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1225 ns Started: 1225 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1230 ns Started: 1230 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1235: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-63] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1235: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1235 ns Started: 1235 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1245 ns Started: 1245 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1250: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-30] CAPTURED: rdata = 22 rempty = 0 rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1250 ns Started: 1250 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1255: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-64] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1255: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1255 ns Started: 1255 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1265 ns Started: 1265 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1270 ns Started: 1270 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1275: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-65] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1275: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1275 ns Started: 1275 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1285 ns Started: 1285 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1290: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-31] CAPTURED: rdata = 22 rempty = 0 rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1290 ns Started: 1290 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1295: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-66] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1295: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1295 ns Started: 1295 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1305 ns Started: 1305 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1310 ns Started: 1310 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1315: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-67] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1315: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1315 ns Started: 1315 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1325 ns Started: 1325 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1330: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-32] CAPTURED: rdata = 22 rempty = 0 rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1330 ns Started: 1330 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1335: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-68] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1335: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1335 ns Started: 1335 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1345 ns Started: 1345 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1350: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-31] SENT: rinc = 1
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1350: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-41] SENT: wdata = 53 win = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1350 ns Started: 1350 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1355: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-69] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 1355: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1355 ns Started: 1355 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1365: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-42] SENT: wdata = 181 win = 0
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1370: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-33] CAPTURED: rdata = 247 rempty = 0 rinc = 1
+# UVM_ERROR asyc_fifo_scoreboard.sv(95) @ 1370: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ MISMATCH: DUT=247, EXP=22
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1370: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-32] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1370 ns Started: 1370 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1370 ns Started: 1370 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1375: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-70] CAPTURED: winc = 0 wfull = 1
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1385: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-43] SENT: wdata = 156 win = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1390 ns Started: 1390 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1390 ns Started: 1390 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1395: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-71] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1405: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-44] SENT: wdata = 192 win = 0
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1410: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-34] CAPTURED: rdata = 251 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 1410: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 251, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1410: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-33] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1410 ns Started: 1410 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1410 ns Started: 1410 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1415: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-72] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1425: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-45] SENT: wdata = 28 win = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1430 ns Started: 1430 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1430 ns Started: 1430 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1435: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-73] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1445: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-46] SENT: wdata = 237 win = 0
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1450: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-35] CAPTURED: rdata = 251 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 1450: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 251, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1450: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-34] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1450 ns Started: 1450 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1450 ns Started: 1450 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1455: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-74] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1465: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-47] SENT: wdata = 161 win = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1470 ns Started: 1470 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1470 ns Started: 1470 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1475: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-75] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1485: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-48] SENT: wdata = 156 win = 0
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1490: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-36] CAPTURED: rdata = 251 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 1490: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 251, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1490: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-35] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1490 ns Started: 1490 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1490 ns Started: 1490 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1495: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-76] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1505: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-49] SENT: wdata = 32 win = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1510 ns Started: 1510 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1510 ns Started: 1510 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1515: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-77] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1525: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-50] SENT: wdata = 219 win = 0
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1530: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-37] CAPTURED: rdata = 251 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 1530: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 251, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1530: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-36] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1530 ns Started: 1530 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1530 ns Started: 1530 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1535: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-78] CAPTURED: winc = 0 wfull = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1550 ns Started: 1550 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1550 ns Started: 1550 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1555: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-79] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1570: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-38] CAPTURED: rdata = 251 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 1570: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 251, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1570: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-37] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1570 ns Started: 1570 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1570 ns Started: 1570 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1575: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-80] CAPTURED: winc = 0 wfull = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1590 ns Started: 1590 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1590 ns Started: 1590 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1595: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-81] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1610: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-39] CAPTURED: rdata = 251 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 1610: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 251, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1610: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-38] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1610 ns Started: 1610 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1610 ns Started: 1610 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1615: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-82] CAPTURED: winc = 0 wfull = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1630 ns Started: 1630 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1630 ns Started: 1630 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1635: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-83] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1650: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-40] CAPTURED: rdata = 237 rempty = 0 rinc = 1
+# UVM_ERROR asyc_fifo_scoreboard.sv(95) @ 1650: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ MISMATCH: DUT=237, EXP=251
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1650: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-39] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1650 ns Started: 1650 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1650 ns Started: 1650 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1655: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-84] CAPTURED: winc = 0 wfull = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1670 ns Started: 1670 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1670 ns Started: 1670 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1675: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-85] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1690: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-41] CAPTURED: rdata = 22 rempty = 1 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(102) @ 1690: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ ignored model empty (size=0), PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1690: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-40] SENT: rinc = 1
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1690 ns Started: 1690 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1695: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-86] CAPTURED: winc = 0 wfull = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1710 ns Started: 1710 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1715: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-87] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1730: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-42] CAPTURED: rdata = 22 rempty = 1 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(102) @ 1730: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ ignored model empty (size=0), PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1730: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-51] SENT: wdata = 47 win = 1
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1730: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-41] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1730 ns Started: 1730 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1735: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-88] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1745: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-52] SENT: wdata = 24 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1745 ns Started: 1745 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1750 ns Started: 1750 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1755: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-89] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 1755: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 24 COMPLETED, PASS (size=1)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1755 ns Started: 1755 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1765: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-53] SENT: wdata = 100 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1765 ns Started: 1765 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1770: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-43] CAPTURED: rdata = 47 rempty = 1 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1770: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-42] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1770 ns Started: 1770 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1775: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-90] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 1775: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 100 COMPLETED, PASS (size=2)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1775 ns Started: 1775 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1785: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-54] SENT: wdata = 149 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1785 ns Started: 1785 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1790 ns Started: 1790 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1795: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-91] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 1795: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 149 COMPLETED, PASS (size=3)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1795 ns Started: 1795 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1805: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-55] SENT: wdata = 113 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1805 ns Started: 1805 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1810: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-44] CAPTURED: rdata = 47 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1810: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-43] SENT: rinc = 1
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1810 ns Started: 1810 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1815: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-92] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 1815: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 113 COMPLETED, PASS (size=4)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1815 ns Started: 1815 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1825: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-56] SENT: wdata = 37 win = 0
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1825 ns Started: 1825 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1830 ns Started: 1830 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1830 ns Started: 1830 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1835: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-93] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1845: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-57] SENT: wdata = 41 win = 1
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1850: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-45] CAPTURED: rdata = 24 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 1850: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 24, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1850: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-44] SENT: rinc = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1850 ns Started: 1850 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1850 ns Started: 1850 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1855: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-94] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 1855: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 41 COMPLETED, PASS (size=4)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1855 ns Started: 1855 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1865: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-58] SENT: wdata = 132 win = 0
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1865 ns Started: 1865 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1870 ns Started: 1870 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1875: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-95] CAPTURED: winc = 0 wfull = 0
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1885: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-59] SENT: wdata = 145 win = 1
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1890: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-46] CAPTURED: rdata = 24 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1890: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-45] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1890 ns Started: 1890 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1895: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-96] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 1895: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 145 COMPLETED, PASS (size=5)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1895 ns Started: 1895 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_wrt_driver.sv(21) @ 1905: uvm_test_top.env.wrt_agt.drv [DRIVER] [WRITE- DRIVER-60] SENT: wdata = 112 win = 1
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1905 ns Started: 1905 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1910 ns Started: 1910 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1915: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-97] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 1915: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 112 COMPLETED, PASS (size=6)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1915 ns Started: 1915 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1925 ns Started: 1925 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1930: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-47] CAPTURED: rdata = 24 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1930: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-46] SENT: rinc = 1
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1930 ns Started: 1930 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1935: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-98] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 1935: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 112 COMPLETED, PASS (size=7)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1935 ns Started: 1935 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1945 ns Started: 1945 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1950 ns Started: 1950 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1950 ns Started: 1950 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1955: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-99] CAPTURED: winc = 1 wfull = 1
+# ** Warning: (vsim-PLI-3070) asyc_fifo_scoreboard.sv(75): $sformatf : Too many arguments.
+#    Time: 1955 ns  Iteration: 4  Region: /fifo_pkg::scoreboard::run_phase
+# UVM_ERROR asyc_fifo_scoreboard.sv(75) @ 1955: uvm_test_top.env.scb [SCOREBOARD-WRITE] DUT asserted wfull too early,FAIL          7
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1955 ns Started: 1955 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1965 ns Started: 1965 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 1970: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-48] CAPTURED: rdata = 100 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 1970: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 100, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 1970: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-47] SENT: rinc = 1
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1970 ns Started: 1970 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1970 ns Started: 1970 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1975: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-100] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 1975: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 112 COMPLETED, PASS (size=7)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1975 ns Started: 1975 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1985 ns Started: 1985 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 1990 ns Started: 1990 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 1990 ns Started: 1990 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 1995: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-101] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 1995: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 112 COMPLETED, PASS (size=8)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 1995 ns Started: 1995 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 2005 ns Started: 2005 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 2010: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-49] CAPTURED: rdata = 149 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 2010: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 149, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 2010: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-48] SENT: rinc = 0
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 2010 ns Started: 2010 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 2010 ns Started: 2010 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 2015: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-102] CAPTURED: winc = 1 wfull = 0
+# UVM_INFO asyc_fifo_scoreboard.sv(58) @ 2015: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE 112 COMPLETED, PASS (size=8)
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 2015 ns Started: 2015 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 2025 ns Started: 2025 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 2030 ns Started: 2030 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 2035: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-103] CAPTURED: winc = 1 wfull = 0
+# UVM_ERROR asyc_fifo_scoreboard.sv(69) @ 2035: uvm_test_top.env.scb [SCOREBOARD-WRITE] DUT failed to assert wfull at full depth (size = 8), FAIL
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 2035 ns Started: 2035 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 2045 ns Started: 2045 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 2050: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-50] CAPTURED: rdata = 149 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 2050: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-49] SENT: rinc = 0
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 2050 ns Started: 2050 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 2055: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-104] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 2055: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 2055 ns Started: 2055 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 2065 ns Started: 2065 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 2070 ns Started: 2070 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 2075: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-105] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 2075: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 2075 ns Started: 2075 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 2085 ns Started: 2085 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 2090: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-51] CAPTURED: rdata = 149 rempty = 0 rinc = 0
+# UVM_INFO asyc_fifo_rd_driver.sv(22) @ 2090: uvm_test_top.env.rd_agt.drv [DRIVER] [READ-DRIVER-50] SENT: rinc = 1
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 2090 ns Started: 2090 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 2095: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-106] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 2095: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 2095 ns Started: 2095 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 2105 ns Started: 2105 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-2 PASSED: RDATA CHECK
+#    Time: 2110 ns Started: 2110 ns  Scope: top.intf.rdata_check File: interface.sv Line: 68
+# ** Info: ASSERTION-3 PASSED: FULL & EMPTY
+#    Time: 2110 ns Started: 2110 ns  Scope: top.intf.full_empty_check File: interface.sv Line: 80
+# UVM_INFO asyc_fifo_wrt_monitor.sv(34) @ 2115: uvm_test_top.env.wrt_agt.mon [WRITE MONITOR] [WRITE-MONITOR-107] CAPTURED: winc = 1 wfull = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(63) @ 2115: uvm_test_top.env.scb [SCOREBOARD-WRITE] WRITE ignored model full (size =8), PASS 
+# ----------------------------------------------------------------------------------
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 2115 ns Started: 2115 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# ** Info: ASSERTION-1 PASSED: WDATA CHECK
+#    Time: 2125 ns Started: 2125 ns  Scope: top.intf.wdata_check File: interface.sv Line: 57
+# UVM_INFO asyc_fifo_rd_monitor.sv(34) @ 2130: uvm_test_top.env.rd_agt.mon [READ MONITOR] [READ-MONITOR-52] CAPTURED: rdata = 113 rempty = 0 rinc = 1
+# UVM_INFO asyc_fifo_scoreboard.sv(90) @ 2130: uvm_test_top.env.scb [[SCOREBOARD-READ]] READ DATA MATCH: 113, PASS
+# ----------------------------------------------------------------------------------
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 2130: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO asyc_fifo_scoreboard.sv(123) @ 2130: uvm_test_top.env.scb [SCOREBOARD-SUMMARY] FINAL RESULT: READ PASS COUNT = 22 | READ FAIL COUNT = 4  | WRITE PASS COUNT = 73 | WRITE FAIL COUNT = 11
+# UVM_INFO asyc_fifo_subscriber.sv(78) @ 2130: uvm_test_top.env.sub [READ COVERAGE] Coverage sampled for READ  = 100.00%
+# UVM_INFO asyc_fifo_subscriber.sv(79) @ 2130: uvm_test_top.env.sub [WRITE COVERAGE] Coverage sampled for WRITE = 100.00%
+# UVM_INFO asyc_fifo_subscriber.sv(80) @ 2130: uvm_test_top.env.sub [COMBINED COVERAGE] Combined READ/WRITE coverage = 100.00%
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  372
+# UVM_WARNING :    0
+# UVM_ERROR :   15
+# UVM_FATAL :    0
+# ** Report counts by id
+# [COMBINED COVERAGE]     1
+# [DRIVER]   110
+# [Questa UVM]     2
+# [READ COVERAGE]     1
+# [READ MONITOR]    52
+# [RNTST]     1
+# [SCOREBOARD-SUMMARY]     1
+# [SCOREBOARD-WRITE]    84
+# [TEST_DONE]     1
+# [WRITE COVERAGE]     1
+# [WRITE MONITOR]   107
+# [[SCOREBOARD-READ]]    26
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 2130 ns  Iteration: 68  Instance: /top
+# Saving coverage database on exit...
+# End time: 22:03:36 on Oct 07,2025, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 2
